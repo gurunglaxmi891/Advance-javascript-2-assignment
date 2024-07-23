@@ -3,15 +3,15 @@
 
 // using callback function
 
-function sumOfFirstFour(callback) {
-    let sum = 0;
-    for (let i = 1; i <= 4; i++) {
-        sum += i;
-    }
-    return sum
+function sum(n,callback){
+    let sum = 0; 
+    for (let i = 1; i <= n; i++) 
+        sum = sum + i; 
+    callback(sum)
 }
-
-console.log("The sum of first four numbers is ",sumOfFirstFour())
-
+function displaySum(total){
+    console.log("The sum is ",total)
+}
+sum(4,displaySum);
 
 
